@@ -131,6 +131,9 @@ ul{list-style:none}
 .hero-title{font-size:2.5rem;font-weight:800;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.5rem}
 .hero-title span{display:block;color:var(--color-accent)}
 .hero-text{font-size:1.1rem;color:var(--color-secondary);margin-bottom:2rem;max-width:500px}
+/* Utility classes to avoid inline styles */
+.hero-bullets{margin-top:1rem;list-style:disc;padding-left:1.25rem;color:var(--color-secondary)}
+
 .hero-buttons{display:flex;flex-wrap:wrap;gap:1rem}
 .btn-primary{background:var(--color-primary);color:var(--color-white);padding:1rem 2rem;border-radius:var(--radius);font-weight:600;transition:var(--transition);display:inline-flex;align-items:center;gap:0.5rem}
 .btn-primary:hover{background:var(--color-accent);transform:translateY(-2px);box-shadow:var(--shadow)}
@@ -149,6 +152,9 @@ ul{list-style:none}
 .section-label{display:inline-block;color:var(--color-accent);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem}
 .section-title{font-size:2rem;font-weight:800;line-height:1.2;margin-bottom:1rem}
 .section-text{color:var(--color-secondary);max-width:600px;margin:0 auto}
+
+.why-us-container{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:1rem}
+.why-us-list{color:var(--color-secondary);line-height:1.6}
 
 /* Services */
 .services-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
@@ -294,7 +300,7 @@ ul{list-style:none}
         <div class="hero-badge">Над 18 години опит</div>
         <h1 class="hero-title">Професионални <span>счетоводни услуги</span></h1>
         <p class="hero-text">Професионални счетоводни услуги за малки и средни предприятия. Опростяваме финансите ви с точни месечни отчети и прозрачни данъчни решения. Работим с индивидуален подход — за да можете да се съсредоточите върху растежа на бизнеса.</p>
-        <ul class="hero-text" style="margin-top:1rem;list-style:disc;padding-left:1.25rem;color:var(--color-secondary)">
+        <ul class="hero-bullets">
           <li>Ясни месечни отчети и навременно данъчно обслужване</li>
           <li>Помощ при регистрация и стартиране на фирма</li>
           <li>Лична поддръжка и бърза реакция при въпроси</li>
@@ -391,8 +397,8 @@ ul{list-style:none}
       <h2 class="section-title">Какво ни отличава</h2>
       <p class="section-text">Конкретни предимства, които решават ежедневните проблеми на бизнеса ви.</p>
     </div>
-    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:1rem">
-      <ul style="color:var(--color-secondary);line-height:1.6">
+    <div class="why-us-container">
+      <ul class="why-us-list">
         <li><strong>Точност и прозрачност:</strong> месечни отчети, които дават яснота за финансите ви.</li>
         <li><strong>Практически решения:</strong> данъчно планиране и свързани действия, насочени към спестяване и оптимизация.</li>
         <li><strong>Подкрепа при старт:</strong> регистрация на фирми и административно обслужване за нови бизнеси.</li>
@@ -485,7 +491,7 @@ ul{list-style:none}
       </div>
       <div class="contact-form">
         <!-- Replace the action URL with your Formspree endpoint, e.g. https://formspree.io/f/your-id -->
-        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="post">
           <input type="hidden" name="_subject" value="Запитване от сайта EMSIEM">
           <input type="hidden" name="_captcha" value="false">
           <div class="form-group">
