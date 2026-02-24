@@ -461,22 +461,25 @@ ul{list-style:none}
         </div>
       </div>
       <div class="contact-form">
-        <form id="contactForm" onsubmit="handleSubmit(event)">
+        <!-- Replace the action URL with your Formspree endpoint, e.g. https://formspree.io/f/your-id -->
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="hidden" name="_subject" value="Запитване от сайта EMSIEM">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-group">
             <label class="form-label" for="name">Вашето име</label>
-            <input type="text" id="name" class="form-input" placeholder="Въведете вашето име" required>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Въведете вашето име" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="email">Имейл адрес</label>
-            <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="phone">Телефон</label>
-            <input type="tel" id="phone" class="form-input" placeholder="0888 123 456">
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="0888 123 456">
           </div>
           <div class="form-group">
             <label class="form-label" for="message">Съобщение</label>
-            <textarea id="message" class="form-input form-textarea" placeholder="Опишете вашето запитване..." required></textarea>
+            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Опишете вашето запитване..." required></textarea>
           </div>
           <button type="submit" class="form-submit">Изпрати запитване</button>
         </form>
